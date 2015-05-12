@@ -1,0 +1,296 @@
+div:after, section:after, nav:after, ol:after, form:after, ul:after, dl:after {content:".";display:block;clear:both;visibility:hidden;height:0;overflow:hidden;}
+
+html{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* -------------------------------- */
+
+.contentAll{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	background: url(../img/bg.jpg) no-repeat center center fixed;
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.clearAfter:after{
+	content: "";
+	display: none;
+}
+
+.line{
+	width: 100%;
+	height: 33%;
+	padding: 0px 50px 0px 667px;
+	float: left;
+	position: relative;
+	box-sizing: border-box;
+}
+
+/* cores da line */
+.nublado{
+	background-color: rgba(180, 180, 180, 0.7);
+}
+
+.chuva{
+	background-color: rgba(66, 67, 67, 0.7);
+}
+
+.limpo{
+	background-color: rgba(0, 225, 255, 0.7);
+}
+
+.line .dayHolder{
+	width: 316px;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+/* para quando não é o dia atual */
+.line .off{
+	background-color: rgba(55, 60, 78, 0.63);
+}
+
+/* para a segunda linha apenas */
+.bBottom:before{
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	bottom: -2px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.3);
+	content: "";
+	z-index: 3;
+}
+
+.line .dayHolder .text{
+	width: 100%;
+	height: 90px;
+	margin-top: -45px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	text-align: center;
+	line-height: 80px;
+	color: #FFFFFF;
+	font-size: 72px;
+	font-weight: 600;
+}
+
+.line .icoHolder{
+	width: 350px;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 316px;
+	fill: #FFFFFF;
+	box-sizing: border-box;
+}
+
+.line .icoHolder svg{}
+
+.line .infoHold{
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.line .infoHold .temp{
+	width: 50%;
+	height: 100%;
+	padding: 30px 0px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.line .infoHold .temp .type,
+.line .infoHold .temp .max,
+.line .infoHold .temp .min{
+	width: 100%;
+	float: left;
+	font-size: 50px;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+
+.line .infoHold .location{
+	width: 50%;
+	float: right;
+}
+
+.line .infoHold .location .city,
+.line .infoHold .location .state{
+	width: 100%;
+	float: left;
+	text-align: right;
+	color: #FFFFFF;
+	font-size: 60px;
+}
+
+.line .infoHold .location .state{
+	font-weight: 600;
+}
+
+.line .pIco{
+	width: 200px;
+	height: 100%;
+	padding: 10px 0px;
+	display: block;
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.line .pIco svg{
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: auto;
+}
+
+.locationMob{
+	display: none;
+}
+
+/* -------------------------------- */
+
+/* -------------------------------- */
+
+@media screen and (max-width: 1200px) and (min-width: 951px){
+	.line{
+		padding: 0px 50px 0px 462px;
+	}
+
+	.line .dayHolder{
+		width: 216px;
+	}
+
+	.line .dayHolder .text{
+		font-size: 45px;
+	}
+
+	.line .icoHolder{
+		width: 246px;
+		left: 216px;
+	}
+
+	.line .infoHold .temp .type,
+	.line .infoHold .temp .max,
+	.line .infoHold .temp .min{
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 950px) and (min-width: 0px){
+	.line{
+		padding: 0px;
+	}
+
+	.line .pIco{
+		width: 100%;
+	}
+
+	.line .dayHolder{
+		width: 100%;
+		height: 40px;
+		float: left;
+		position: relative;
+		top: inherit;
+		left: inherit;
+	}
+
+	.line .dayHolder .text{
+		width: 100%;
+		height: 40px;
+		margin-top: 0px;
+		float: left;
+		position: relative;
+		top: inherit;
+		left: inherit;
+		font-size: 25px;
+		font-weight: 300;
+		line-height: 40px;
+		text-align: center;
+	}
+
+	.line .icoHolder{
+		width: 50%;
+		height: calc(100% - 80px);
+		float: left;
+		position: relative;
+		left: inherit;
+		top: inherit;
+	}
+
+	.line .infoHold .temp .type,
+	.line .infoHold .temp .max,
+	.line .infoHold .temp .min{
+		font-size: 30px;
+	}
+
+	.line .infoHold{
+		width: 50%;
+		height: calc(100% - 80px);
+		position: initial;
+	}
+
+	.line .infoHold .location{
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+
+	.line .infoHold .temp{
+		width: 100%;
+		padding: 0px;
+	}
+
+	.line .infoHold .location{
+		display: none;
+	}
+
+	.locationMob{
+		height: 40px;
+		display: table;
+		margin: auto;
+	}
+
+	.locationMob .text{
+		font-size: 16px;
+		color: #FFFFFF;
+		line-height: 40px;
+	}
+
+	.locationMob .text .bold{
+		font-weight: 600;
+	}
+
+	.ptop{
+		padding-top: 20px !important;
+	}
+}
+
+@media screen and (max-width: 380px) and (min-width: 0px){
+	.line .infoHold .temp .type,
+	.line .infoHold .temp .max,
+	.line .infoHold .temp .min{
+		font-size: 23px;
+	}
+}

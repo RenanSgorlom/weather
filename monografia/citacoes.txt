@@ -1,0 +1,112 @@
+SVG is an application language of XML, the extensible markup (meta) Language. 
+All SVG documents follow the syntax rules of XML 1.0.
+
+- SVG Unleashed Andrew Watt, Chris Lilley 2002 pag 8
+
+------------------------------------------------------------
+
+Vantagens do SVG - 
+
+"SVG has many potential advantages over existing graphics standars"
+
+"It is the combination of characteristics that makes SVG potentially 
+so powerful and useful for programmatically orientated or created graphics."
+
+- sobre File Size
+- "The size of SVG images of course, depends on the complexity of the vector image
+ that is to be rendered.
+
+- Zoom nas imagens
+- SVG images can be zoomed without the need to go back to the server to reload another version of the image.
+
+* SVG Unleashed Andrew Watt, Chris Lilley 2002 pag 12
+
+------------------------------------------------------------
+
+- Sobre código livre
+- That code may be inspected to assist the understanding of how the image
+ was constructed, and the option to save the SVG code to disc is also available.
+
+* SVG Unleashed Andrew Watt, Chris Lilley 2002 pag 19
+
+------------------------------------------------------------
+
+- Independente de resolução
+- "SVG images are rendered in a manner that is independent of the resolution 
+of the device on which its is being rendered."
+
+- Sobre Mobile devices
+Apesar de ja ter se cumprido
+-"One of the aims in the original Requirements document for SVG was that 
+it be available on a range of display devices, not only on the conventional desktop browser."
+
+* SVG Unleashed Andrew Watt, Chris Lilley 2002 pag 24
+
+------------------------------------------------------------
+
+J. David Eisenberg, Amelia Bellamy-Royds - 2014
+
+SVG, which stand for Scalable Vector Graphics, is an application of 
+XML that makes it possible to represent graphic information in a compact, portable form.
+
+
+J. David Eisenberg, Amelia Bellamy-Royds - 2014 pag 1
+
+------------------------------------------------------------
+
+Usando SVG na web
+
+SVG as an Image
+
+"SVG is an image format, and as such it can be included in HTML pages
+ in the same ways as other image types.
+
+J. David Eisenberg, Amelia Bellamy-Royds - 2014 pag 15
+
+------------------------------------------------------------
+
+Including SVG in CSS
+
+"The most commonly used is the background-image property, which draws the
+ image behind the text content of the element being styled."
+
+
+J. David Eisenberg, Amelia Bellamy-Royds - 2014 pag 17
+
+------------------------------------------------------------
+
+"The image and application approaches to integrating SVG in a web page
+ are both methods to display a complete, separate, SVG file. However, 
+it is also possible to mix SVG code with HTML or XML markup in a single file."
+
+
+J. David Eisenberg, Amelia Bellamy-Royds - 2014 pag 20
+
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
