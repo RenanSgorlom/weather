@@ -1,0 +1,110 @@
+{
+ "query": {
+  "count": 1,
+  "created": "2015-05-12T14:47:21Z",
+  "lang": "pt-BR",
+  "results": {
+   "channel": {
+    "title": "Yahoo! Weather - Londrina, BR",
+    "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Londrina__BR/*http://weather.yahoo.com/forecast/BRXX0137_f.html",
+    "description": "Yahoo! Weather for Londrina, BR",
+    "language": "en-us",
+    "lastBuildDate": "Tue, 12 May 2015 11:00 am BRT",
+    "ttl": "60",
+    "location": {
+     "city": "Londrina",
+     "country": "Brazil",
+     "region": "PR"
+    },
+    "units": {
+     "distance": "mi",
+     "pressure": "in",
+     "speed": "mph",
+     "temperature": "F"
+    },
+    "wind": {
+     "chill": "68",
+     "direction": "130",
+     "speed": "6"
+    },
+    "atmosphere": {
+     "humidity": "68",
+     "pressure": "30.12",
+     "rising": "0",
+     "visibility": "6.21"
+    },
+    "astronomy": {
+     "sunrise": "6:50 am",
+     "sunset": "5:52 pm"
+    },
+    "image": {
+     "title": "Yahoo! Weather",
+     "width": "142",
+     "height": "18",
+     "link": "http://weather.yahoo.com",
+     "url": "http://l.yimg.com/a/i/brand/purplelogo//uh/us/news-wea.gif"
+    },
+    "item": {
+     "title": "Conditions for Londrina, BR at 11:00 am BRT",
+     "lat": "-23.31",
+     "long": "-51.17",
+     "link": "http://us.rd.yahoo.com/dailynews/rss/weather/Londrina__BR/*http://weather.yahoo.com/forecast/BRXX0137_f.html",
+     "pubDate": "Tue, 12 May 2015 11:00 am BRT",
+     "condition": {
+      "code": "30",
+      "date": "Tue, 12 May 2015 11:00 am BRT",
+      "temp": "68",
+      "text": "Partly Cloudy"
+     },
+     "description": "\n<img src=\"http://l.yimg.com/a/i/us/we/52/30.gif\"/><br />\n<b>Current Conditions:</b><br />\nPartly Cloudy, 68 F<BR />\n<BR /><b>Forecast:</b><BR />\nTue - Mostly Sunny. High: 76 Low: 59<br />\nWed - Partly Cloudy. High: 76 Low: 57<br />\nThu - Partly Cloudy. High: 77 Low: 60<br />\nFri - Showers. High: 76 Low: 60<br />\nSat - Partly Cloudy. High: 79 Low: 63<br />\n<br />\n<a href=\"http://us.rd.yahoo.com/dailynews/rss/weather/Londrina__BR/*http://weather.yahoo.com/forecast/BRXX0137_f.html\">Full Forecast at Yahoo! Weather</a><BR/><BR/>\n(provided by <a href=\"http://www.weather.com\" >The Weather Channel</a>)<br/>\n",
+     "forecast": [
+      {
+       "code": "34",
+       "date": "12 May 2015",
+       "day": "Tue",
+       "high": "76",
+       "low": "59",
+       "text": "Mostly Sunny"
+      },
+      {
+       "code": "30",
+       "date": "13 May 2015",
+       "day": "Wed",
+       "high": "76",
+       "low": "57",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "30",
+       "date": "14 May 2015",
+       "day": "Thu",
+       "high": "77",
+       "low": "60",
+       "text": "Partly Cloudy"
+      },
+      {
+       "code": "11",
+       "date": "15 May 2015",
+       "day": "Fri",
+       "high": "76",
+       "low": "60",
+       "text": "Showers"
+      },
+      {
+       "code": "30",
+       "date": "16 May 2015",
+       "day": "Sat",
+       "high": "79",
+       "low": "63",
+       "text": "Partly Cloudy"
+      }
+     ],
+     "guid": {
+      "isPermaLink": "false",
+      "content": "BRXX0137_2015_05_16_7_00_BRT"
+     }
+    }
+   }
+  }
+ }
+}
