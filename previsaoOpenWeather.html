@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+	<script>
+	var callbackFunction = function(data) {
+
+		console.log('JSON Retorno (Select *): ');
+		console.log(data);
+
+		var pais = data.query.results.channel.location.country;
+		var estado = data.query.results.channel.location.region;
+		var cidade = data.query.results.channel.location.city;
+		var codigo = data.query.results.channel.item.condition.code;
+		var dataDia = data.query.results.channel.item.condition.date;
+		var temperaturaAtual = data.query.results.channel.item.condition.temp;
+		var textoAtual = data.query.results.channel.item.condition.text;
+	//
+	/*
+	console.log('Pais: ' + pais);
+	console.log('Estado: ' + estado);
+	console.log('Cidade: ' + cidade);
+	console.log('Codigo tipo: ' + codigo);
+	console.log('Data: ' + dataDia);
+	console.log('Temperatura Atual: ' + temperaturaAtual);
+	console.log('Texto Atual: ' + textoAtual);
+	*/
+
+	document.getElementById('pais').innerText = pais;
+	document.getElementById('estado').innerText = estado;
+	document.getElementById('cidade').innerText = cidade;
+	document.getElementById('codigo').innerText = codigo;
+	document.getElementById('dataDia').innerText = dataDia;
+	document.getElementById('temperaturaAtual').innerText = temperaturaAtual;
+	document.getElementById('textoAtual').innerText = textoAtual;
+	//
+
+	var previsaoAmanha = data.query.results.channel.item.forecast[1];
+	// [0] -> Dia atual
+	// [1] -> Amanha
+	// [2] -> Depois de amanhã
+	// ...
+	var previsaoAmanhaCodigo = previsaoAmanha.code;
+	var previsaoAmanhaData = previsaoAmanha.date;
+	var previsaoAmanhaDia = previsaoAmanha.day;
+	var previsaoAmanhaMax = previsaoAmanha.high;
+	var previsaoAmanhaMin = previsaoAmanha.low;
+	var previsaoAmanhaTexto = previsaoAmanha.text;
+
+	console.log('Previsão Amanhã: ');
+	console.log(previsaoAmanha);
+
+	document.getElementById('previsaoAmanhaCodigo').innerText = previsaoAmanhaCodigo;
+	document.getElementById('previsaoAmanhaData').innerText = previsaoAmanhaData;
+	document.getElementById('previsaoAmanhaDia').innerText = previsaoAmanhaDia;
+	document.getElementById('previsaoAmanhaMax').innerText = previsaoAmanhaMax;
+	document.getElementById('previsaoAmanhaMin').innerText = previsaoAmanhaMin;
+	document.getElementById('previsaoAmanhaTexto').innerText = previsaoAmanhaTexto;
+
+// depois de amanhã
+
+	var previsaoDepAmanha = data.query.results.channel.item.forecast[2];
+
+	var previsaoDepAmanhaCodigo = previsaoDepAmanha.code;
+	var previsaoDepAmanhaData = previsaoDepAmanha.date;
+	var previsaoDepAmanhaDia = previsaoDepAmanha.day;
+	var previsaoDepAmanhaMax = previsaoDepAmanha.high;
+	var previsaoDepAmanhaMin = previsaoDepAmanha.low;
+	var previsaoDepAmanhaTexto = previsaoDepAmanha.text;
+
+	console.log('Previsão depois de Amanhã: ');
+	console.log(previsaoDepAmanha);
+
+	document.getElementById('previsaoDepAmanhaCodigo').innerText = previsaoDepAmanhaCodigo;
+	document.getElementById('previsaoDepAmanhaData').innerText = previsaoDepAmanhaData;
+	document.getElementById('previsaoDepAmanhaDia').innerText = previsaoDepAmanhaDia;
+	document.getElementById('previsaoDepAmanhaMax').innerText = previsaoDepAmanhaMax;
+	document.getElementById('previsaoDepAmanhaMin').innerText = previsaoDepAmanhaMin;
+	document.getElementById('previsaoDepAmanhaTexto').innerText = previsaoDepAmanhaTexto;
+};
+</script>
+
+<ul>
+	<li>Pais: <span id="pais"></span></li>
+	<li>Estado: <span id="estado"></span></li>
+	<li>Cidade: <span id="cidade"></span></li>
+	<li>Codigo tipo: <span id="codigo"></span></li>
+	<li>Data: <span id="dataDia"></span></li>
+	<li>Temperatura Atual: <span id="temperaturaAtual"></span></li>
+	<li>Texto Atual: <span id="textoAtual"></span></li>
+</ul>
+
+<ul>
+	<li><strong>Previsão Amanhã:</strong></li>
+	<li>Código: <span id="previsaoAmanhaCodigo"></span></li>
+	<li>Data: <span id="previsaoAmanhaData"></span></li>
+	<li>Dia: <span id="previsaoAmanhaDia"></span></li>
+	<li>Temeperatura máxima:<span id="previsaoAmanhaMax"></span></li>
+	<li>Temeperatura minima:<span id="previsaoAmanhaMin"></span></li>
+	<li>Texto: <span id="previsaoAmanhaTexto"></span></li>
+</ul>
+
+<ul>
+	<li><strong>Previsão depois de Amanhã:</strong></li>
+	<li>Código: <span id="previsaoDepAmanhaCodigo"></span></li>
+	<li>Data: <span id="previsaoDepAmanhaData"></span></li>
+	<li>Dia: <span id="previsaoDepAmanhaDia"></span></li>
+	<li>Temeperatura máxima:<span id="previsaoDepAmanhaMax"></span></li>
+	<li>Temeperatura minima:<span id="previsaoDepAmanhaMin"></span></li>
+	<li>Texto: <span id="previsaoDepAmanhaTexto"></span></li>
+</ul>
+
+<script src="http://api.openweathermap.org/data/2.5/weather?q=Londrina,BR&callback"></script>
+</body>
+</html>

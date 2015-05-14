@@ -1,0 +1,41 @@
+"SMIL 2.0 foi desenvolvido para trazer uma apresentação multimedia interativa para a web"
+
+"É baseada em texto, não proprietario, formato padrão XML que é tecida da familia XML cooperativa de interdependentes linguages"
+
+"SMIL 2.0 não é uma linguagem de animação ou um formato de midia, mas uma maneira de combinar animação e objetos de midia em uma unica apresentação coerente"
+
+"SMIL foca em fazer em multimedia o que o HTML faz com o hiper texto. Trazer para todo tipo de dispostivo de apresentação (PCs, mobiles dispositivos de mão até TVs) com formato de facil autor descritivo que pode ser mostrado em uma diversidade de plataformas"
+
+"A funcionalidade do SMIL também é integrada em varias outras linguagens"
+
+"SVG - gráficos animados com SMIL -timing-"
+
+------------------------------------------------
+
+"SMIL 2.0 was developed to bring presentation-level interactive multimedia to the Web."
+
+
+
+"It is a text-based, non-proprietary, 
+XML standardized format that is woven into the W3C's XML-based 
+family of cooperative and interdependent languages."
+
+
+
+"SMIL 2.0 is not an animation language or a media format, 
+but a way of combining animation and media object into a single choherent presentation."
+
+
+
+"SMIL aims to do for multimedia what HTML did for hypertext; 
+bring it onto every presentation device (PCs, mobile/handhel systems, even TVs) 
+with easy-to-author descriptive format that can be displayed 
+on a variety of readily available cross-platform players."
+
+
+
+"SMIL functionality is also integrated into a number of other languages."
+
+
+
+"SVG - graphics animated with SMIL timing."

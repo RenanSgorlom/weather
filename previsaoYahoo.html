@@ -38,6 +38,61 @@
 	document.getElementById('textoAtual').innerText = textoAtual;
 	//
 
+	//Descomentar força o codigo ser 01 e adicionar a classe nublado para aparecer a imgem com seletor da id + class pro svg
+	//codigo = 01;
+
+	// function textosTempo() {
+	// 	if(textoAtual == 'Partly Cloudy'){
+	// 		textoAtual = 'Parcialmente Nublado';
+	// 	}
+	// }
+
+	// condições
+	if(codigo == 32 || codigo == 34 || codigo == 36) {
+		document.getElementById('imagem-svg').className = 'ensolarado';
+	}
+	else if (codigo == 31 || codigo == 33) {
+		document.getElementById('imagem-svg').className = 'limpoNoite';
+	}
+	else if (codigo == 26 || codigo == 27 || codigo == 28) {
+		document.getElementById('imagem-svg').className = 'nublado';
+	}
+	else if (codigo == 29 || codigo == 30 || codigo == 44) {
+		document.getElementById('imagem-svg').className = 'pNublado';
+	}
+	else if (codigo == 8 || codigo == 9 || codigo == 10 || codigo == 11 || codigo == 12 || codigo == 40) {
+		document.getElementById('imagem-svg').className = 'chuva';
+	}
+	else if (codigo == 1 || codigo == 3 || codigo == 4 || codigo == 23 || codigo == 37 || codigo == 38 || codigo == 39 || codigo == 45 || codigo == 47 || codigo == 35) {
+		document.getElementById('imagem-svg').className = 'tempestade';
+	}
+	else if (codigo == 8 || codigo == 9 || codigo == 10 || codigo == 11 || codigo == 12 || codigo == 40) {
+		document.getElementById('imagem-svg').className = 'chuva';
+	}
+	else if (codigo == 13 || codigo == 14 || codigo == 16 || codigo == 25) {
+		document.getElementById('imagem-svg').className = 'neve';
+	}
+	else if (codigo == 15 || codigo == 41 || codigo == 42 || codigo == 43 || codigo == 46 || codigo == 8 || codigo == 5 || codigo == 6 || codigo == 7 || codigo == 18) {
+		document.getElementById('imagem-svg').className = 'nevasca';
+	}
+	else if (codigo == 0 || codigo == 2) {
+		document.getElementById('imagem-svg').className = 'tornado';
+	}
+	else if (codigo == 20 || codigo == 21 || codigo == 22) {
+		document.getElementById('imagem-svg').className = 'nevoa';
+	}
+	else if (codigo == 19 || codigo == 24) {
+		document.getElementById('imagem-svg').className = 'tempAdv';
+	}
+	else{
+		console.log('codigo desconhecido');
+	}
+
+
+	//if(codigo == 01 || codigoOutraApi == 01) {
+		//adiciona a classe igual ali em cima
+	//}
+
 	var previsaoAmanha = data.query.results.channel.item.forecast[1];
 	// [0] -> Dia atual
 	// [1] -> Amanha
@@ -62,24 +117,24 @@
 
 // depois de amanhã
 
-	var previsaoDepAmanha = data.query.results.channel.item.forecast[2];
+var previsaoDepAmanha = data.query.results.channel.item.forecast[2];
 
-	var previsaoDepAmanhaCodigo = previsaoDepAmanha.code;
-	var previsaoDepAmanhaData = previsaoDepAmanha.date;
-	var previsaoDepAmanhaDia = previsaoDepAmanha.day;
-	var previsaoDepAmanhaMax = previsaoDepAmanha.high;
-	var previsaoDepAmanhaMin = previsaoDepAmanha.low;
-	var previsaoDepAmanhaTexto = previsaoDepAmanha.text;
+var previsaoDepAmanhaCodigo = previsaoDepAmanha.code;
+var previsaoDepAmanhaData = previsaoDepAmanha.date;
+var previsaoDepAmanhaDia = previsaoDepAmanha.day;
+var previsaoDepAmanhaMax = previsaoDepAmanha.high;
+var previsaoDepAmanhaMin = previsaoDepAmanha.low;
+var previsaoDepAmanhaTexto = previsaoDepAmanha.text;
 
-	console.log('Previsão depois de Amanhã: ');
-	console.log(previsaoDepAmanha);
+console.log('Previsão depois de Amanhã: ');
+console.log(previsaoDepAmanha);
 
-	document.getElementById('previsaoDepAmanhaCodigo').innerText = previsaoDepAmanhaCodigo;
-	document.getElementById('previsaoDepAmanhaData').innerText = previsaoDepAmanhaData;
-	document.getElementById('previsaoDepAmanhaDia').innerText = previsaoDepAmanhaDia;
-	document.getElementById('previsaoDepAmanhaMax').innerText = previsaoDepAmanhaMax;
-	document.getElementById('previsaoDepAmanhaMin').innerText = previsaoDepAmanhaMin;
-	document.getElementById('previsaoDepAmanhaTexto').innerText = previsaoDepAmanhaTexto;
+document.getElementById('previsaoDepAmanhaCodigo').innerText = previsaoDepAmanhaCodigo;
+document.getElementById('previsaoDepAmanhaData').innerText = previsaoDepAmanhaData;
+document.getElementById('previsaoDepAmanhaDia').innerText = previsaoDepAmanhaDia;
+document.getElementById('previsaoDepAmanhaMax').innerText = previsaoDepAmanhaMax;
+document.getElementById('previsaoDepAmanhaMin').innerText = previsaoDepAmanhaMin;
+document.getElementById('previsaoDepAmanhaTexto').innerText = previsaoDepAmanhaTexto;
 };
 </script>
 
@@ -89,7 +144,7 @@
 	<li>Cidade: <span id="cidade"></span></li>
 	<li>Codigo tipo: <span id="codigo"></span></li>
 	<li>Data: <span id="dataDia"></span></li>
-	<li>Temperatura Atual: <span id="temperaturaAtual"></span></li>
+	<li>Temperatura Atual: <span id="temperaturaAtual"></span>ºC</li>
 	<li>Texto Atual: <span id="textoAtual"></span></li>
 </ul>
 
@@ -98,8 +153,8 @@
 	<li>Código: <span id="previsaoAmanhaCodigo"></span></li>
 	<li>Data: <span id="previsaoAmanhaData"></span></li>
 	<li>Dia: <span id="previsaoAmanhaDia"></span></li>
-	<li>Temeperatura máxima:<span id="previsaoAmanhaMax"></span></li>
-	<li>Temeperatura minima:<span id="previsaoAmanhaMin"></span></li>
+	<li>Temeperatura máxima:<span id="previsaoAmanhaMax"></span>ºC</li>
+	<li>Temeperatura minima:<span id="previsaoAmanhaMin"></span>ºC</li>
 	<li>Texto: <span id="previsaoAmanhaTexto"></span></li>
 </ul>
 
@@ -108,10 +163,12 @@
 	<li>Código: <span id="previsaoDepAmanhaCodigo"></span></li>
 	<li>Data: <span id="previsaoDepAmanhaData"></span></li>
 	<li>Dia: <span id="previsaoDepAmanhaDia"></span></li>
-	<li>Temeperatura máxima:<span id="previsaoDepAmanhaMax"></span></li>
-	<li>Temeperatura minima:<span id="previsaoDepAmanhaMin"></span></li>
+	<li>Temeperatura máxima:<span id="previsaoDepAmanhaMax"></span>ºC</li>
+	<li>Temeperatura minima:<span id="previsaoDepAmanhaMin"></span>ºC</li>
 	<li>Texto: <span id="previsaoDepAmanhaTexto"></span></li>
 </ul>
+
+<span id="imagem-svg"></span>
 
 <script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='Londrina') and u='c'&format=json&callback=callbackFunction"></script>
 </body>
