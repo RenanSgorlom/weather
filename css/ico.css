@@ -158,7 +158,7 @@ body{}
 @keyframes anim-nub {
 	0% {
 		opacity: 0.5;
-		transform: scale(0.5);
+		transform: scale(1);
 	}
 
 	100% {
@@ -1676,12 +1676,12 @@ body{}
 
 .neblina .neb1{
 	-webkit-animation: 	anim-neb1 5s infinite alternate;
-	animation: 			anim-lua 5s infinite alternate;
+	animation: 			anim-neb1 5s infinite alternate;
 }
 
 .neblina .neb2{
 	-webkit-animation: 	anim-neb2 5s infinite alternate;
-	animation: 			anim-lua 5s infinite alternate;
+	animation: 			anim-neb2 5s infinite alternate;
 }
 
 @-webkit-keyframes anim-neb1{
